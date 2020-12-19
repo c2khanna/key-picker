@@ -1,0 +1,58 @@
+<div class="key-admin-container">
+  <div>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Brand" autocomplete="off" [(ngModel)]="brand"/>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Model" autocomplete="off" [(ngModel)]="model"/>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput type="number" placeholder="Price" autocomplete="off" [(ngModel)]="price"/>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Link" autocomplete="off" [(ngModel)]="link"/>
+    </mat-form-field>
+  </div>
+  <div>
+    <mat-form-field>
+      <input matInput type="text" placeholder="Image Link" autocomplete="off" [(ngModel)]="imgLink"/>
+    </mat-form-field>
+  </div>
+  <div class="row">
+    <label>Switch Type: </label>
+    <mat-checkbox (change)="onSwitchTypeChecked($event.checked, 'red')">Red</mat-checkbox>
+    <mat-checkbox (change)="onSwitchTypeChecked($event.checked, 'brown')">Brown</mat-checkbox>
+    <mat-checkbox (change)="onSwitchTypeChecked($event.checked, 'blue')">Blue</mat-checkbox>
+    <mat-checkbox (change)="onSwitchTypeChecked($event.checked, 'silver')">Silver</mat-checkbox>
+  </div>
+  <div class="row">
+    <label>Size: </label>
+    <mat-radio-group [(ngModel)]="size">
+      <mat-radio-button value="Full">Full</mat-radio-button>
+      <mat-radio-button value="TKL">TKL</mat-radio-button>
+      <mat-radio-button value="60%">60%</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="row">
+    <mat-radio-group [(ngModel)]="isWireless">
+      <label>is Wireless?</label>
+      <mat-radio-button [value]="true">Wireless</mat-radio-button>
+      <mat-radio-button [value]="false">Not Wireless</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <div class="row">
+    <mat-radio-group [(ngModel)]="light">
+      <label>light?</label>
+      <mat-radio-button value="N/A">N/A</mat-radio-button>
+      <mat-radio-button value="Single">Single</mat-radio-button>
+      <mat-radio-button value="RGB">RGB</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  <button mat-raised-button color="primary" (click)="onKeyboardSubmit()">Save</button>
+</div>
