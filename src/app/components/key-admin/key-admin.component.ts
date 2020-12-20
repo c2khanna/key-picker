@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
-import { environment } from '../../environments/environment';
-import {Keyboard} from '../models/keyboard';
+import { environment } from '../../../environments/environment';
+import {Keyboard} from '../../models/keyboard';
 import axios from 'axios';
+import { KeyboardService } from 'src/app/services/keyboard.service';
 
 @Component({
   selector: 'app-key-admin',
