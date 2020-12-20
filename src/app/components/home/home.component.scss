@@ -1,0 +1,22 @@
+.home-container {
+  margin: 16px;
+}
+
+.header {
+  height: 64px;
+}
+
+.main-container {
+  display: flex;
+  height: calc(100vh - 64px)
+}
+
+.filter-panel {
+  width: 25%;
+  border-right: 1px solid black;
+}
+
+.card-container {
+  width: 75%;
+  margin: 0 16px;;
+}

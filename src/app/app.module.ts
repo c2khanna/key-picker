@@ -11,12 +11,19 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './components/home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
+import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
+import { CardContainerComponent } from './components/card-container/card-container.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KeyAdminComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FilterPanelComponent,
+    CardContainerComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +34,8 @@ import { HomeComponent } from './components/home/home.component';
     MatInputModule,
     MatCheckboxModule,
     MatRadioModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

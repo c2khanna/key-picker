@@ -21,7 +21,7 @@ export class KeyAdminComponent {
   isWireless = true;
   light = "N/A";
 
-  constructor() { }
+  constructor(private keyboardService:KeyboardService) { }
 
   onSwitchTypeChecked(checked: boolean, type: string) {
     if(checked) {
@@ -32,9 +32,7 @@ export class KeyAdminComponent {
   }
 
   onKeyboardSubmit() {
-    const postUrl = environment.apiUrl + '/api/keyboard';
-
-    let data:Keyboard = {
+    let newKeyboardData:Keyboard = {
       brand: this.brand,
       model: this.model,
       price: this.price,
@@ -46,7 +44,7 @@ export class KeyAdminComponent {
       light: this.light
     }
 
-    axios.post(postUrl, data).then((res) => {
+    this.keyboardService.addNewKeyboard(newKeyboardData).subscribe(() => {
       this.brand = '';
       this.model = '';
       this.price = 0;
@@ -56,10 +54,10 @@ export class KeyAdminComponent {
       this.size = 'Full';
       this.isWireless = true;
       this.light = "N/A";
-
       alert('successfully added data to DB');
-    }).catch((err) => {
-      alert('YOU FUCKED UP');
-    })
+    }, (e) => {
+      console.error("error", e);
+      alert('Something went wrong');
+    });
   }
 }
