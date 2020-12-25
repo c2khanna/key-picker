@@ -15,8 +15,12 @@ export class CardContainerComponent implements OnInit {
 
   ngOnInit(): void {
     this.keyboardService.getAllKeyboards().subscribe((keyboards) => {
-      this.keyboards = keyboards;
-    })
+      this.keyboards = keyboards.sort((a:Keyboard, b:Keyboard) => {
+        if(a.brand < b.brand) { return -1; }
+        if(a.brand > b.brand) { return 1; }
+        return 0;
+      });
+    });
   }
 
 }

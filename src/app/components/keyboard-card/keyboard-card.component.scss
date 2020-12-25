@@ -1,0 +1,31 @@
+.keyboard-link {
+  text-decoration: none;
+}
+.keyboard-card {
+  width: 300px;
+  height: 400px;
+  mat-card-header {
+    ::ng-deep.mat-card-header-text {
+      width: 100%;
+    }
+  }
+  mat-card-title {
+    display: flex;
+    width: 100%;
+    .title-left {
+      width: 50%;
+    }
+    .title-right {
+      width: 50%;
+      text-align: right;
+    }
+  }
+  img {
+    object-fit: contain;
+    height: 168px;
+  }
+
+  mat-card-content ul li {
+    padding: 3px 0;
+  }
+}

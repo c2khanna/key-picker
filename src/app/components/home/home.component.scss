@@ -8,15 +8,16 @@
 
 .main-container {
   display: flex;
-  height: calc(100vh - 64px)
+  height: calc(100vh - 64px);
 }
 
 .filter-panel {
   width: 25%;
+  max-width: 400px;
   border-right: 1px solid black;
 }
 
 .card-container {
   width: 75%;
-  margin: 0 16px;;
+  margin: 0 16px;
 }

@@ -1,3 +1,5 @@
-<div>
-  <div *ngFor="let k of keyboards">{{k.model}}</div>
+<div fxLayout="row wrap" class="card-container">
+  <div *ngFor="let k of keyboards" class="card-item">
+    <app-keyboard-card [keyboard]="k"></app-keyboard-card>
+  </div>
 </div>

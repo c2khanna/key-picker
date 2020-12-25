@@ -4,17 +4,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { KeyAdminComponent } from './components/key-admin/key-admin.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
+import { CardContainerComponent } from './components/card-container/card-container.component';
+import { KeyboardCardComponent } from './components/keyboard-card/keyboard-card.component';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
-import { HeaderComponent } from './components/header/header.component';
-import { FilterPanelComponent } from './components/filter-panel/filter-panel.component';
-import { CardContainerComponent } from './components/card-container/card-container.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { CardContainerComponent } from './components/card-container/card-contain
     HomeComponent,
     HeaderComponent,
     FilterPanelComponent,
-    CardContainerComponent
+    CardContainerComponent,
+    KeyboardCardComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { CardContainerComponent } from './components/card-container/card-contain
     MatCheckboxModule,
     MatRadioModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatCardModule,
+    FlexLayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,20 @@
+<a [href]="keyboard.link" class="keyboard-link" target="_blank">
+  <mat-card class="keyboard-card mat-elevation-z4">
+    <mat-card-header>
+      <mat-card-title>
+        <div class="title-left">{{keyboard.brand}}</div>
+        <div class="title-right">${{keyboard.price}}</div>
+      </mat-card-title>
+      <mat-card-subtitle>{{keyboard.model}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="keyboard.imgLink">
+    <mat-card-content>
+      <ul>
+        <li>{{getIsWirelessString()}}</li>
+        <li>{{keyboard.size}}</li>
+        <li>Backlight: {{keyboard.light}}</li>
+        <li>Switch types: {{keyboard.switchType}}</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</a>
