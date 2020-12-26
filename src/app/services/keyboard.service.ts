@@ -25,4 +25,12 @@ export class KeyboardService {
       return keyboards;
     }));
   }
+
+  filterKeyboards(filterParams: any): Observable<any> {
+    const filterUrl = environment.apiUrl + '/api/filterKeyboards';
+
+    return this.httpClient.post<Keyboard[]>(filterUrl, filterParams).pipe((keyboards) => {
+      return keyboards;
+    })
+  }
 }

@@ -1,0 +1,68 @@
+.brand-container,
+.switch-type-container,
+.size-container,
+.wireless-container,
+.backlight-container {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+.filter-button {
+  margin: 16px;
+  margin-left: 0;
+  button {
+    width: 100px;
+  }
+}
+
+.price-slider {
+  width: 90%;
+  .price-inputs {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  mat-form-field {
+    width: 15%;
+  }
+  .ngx-slider .ngx-slider-tick {
+    width: 1px;
+    height: 10px;
+    margin-left: 4px;
+    border-radius: 0;
+    background: #ffe4d1;
+    top: -1px;
+  }
+}
+
+::ng-deep {
+  .price-slider .ngx-slider .ngx-slider-selection {
+    background: #ff4081;
+  }
+
+  .price-slider .ngx-slider .ngx-slider-pointer {
+    width: 24px;
+    height: 24px;
+    margin-top: 3px;
+    background-color: #ff4081;
+
+  }
+
+  .price-slider .ngx-slider .ngx-slider-pointer:after {
+    display: none;
+  }
+
+  .price-slider .ngx-slider .ngx-slider-bubble {
+    bottom: 14px;
+  }
+
+  .price-slider .ngx-slider .ngx-slider-limit {
+    font-weight: normal;
+    color: #ff4081;
+  }
+
+  .price-slider .ngx-slider .ngx-slider-tick.ngx-slider-selected {
+    background: #ff4081;
+  }
+}

@@ -18,6 +18,11 @@ import { MatCardModule } from '@angular/material/card';
 import { HomeComponent } from './components/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NgxSliderModule } from '@angular-slider/ngx-slider';
+import { MatSelectModule } from '@angular/material/select';
+import { MatToolbarModule } from '@angular/material/toolbar';
+
+
 
 @NgModule({
   declarations: [
@@ -42,6 +47,9 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     HttpClientModule,
     MatCardModule,
     FlexLayoutModule,
+    NgxSliderModule,
+    MatSelectModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

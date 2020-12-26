@@ -1,1 +1,49 @@
-<p>filter-panel works!</p>
+<h4>Brand</h4>
+<div class="brand-container">
+  <mat-checkbox (change)="onBrandChecked($event.checked, 'Corsair')">Corsair</mat-checkbox>
+  <mat-checkbox (change)="onBrandChecked($event.checked, 'Logitech')">Logitech</mat-checkbox>
+  <mat-checkbox (change)="onBrandChecked($event.checked, 'Razer')">Razer</mat-checkbox>
+</div>
+
+<h4>Price</h4>
+<div class="price-slider">
+  <ngx-slider [(value)]="low" [(highValue)]="high" [options]="options"></ngx-slider>
+  <div class="price-inputs">
+    <mat-form-field color="accent">
+      <input matInput type="number" placeholder="Min" [(ngModel)]="low" class="low-input">
+    </mat-form-field>
+    <mat-form-field color="accent">
+      <input matInput type="number" placeholder="Max" [(ngModel)]="high" class="high-input">
+    </mat-form-field>
+  </div>
+</div>
+<h4>Switch Types</h4>
+<div class="switch-type-container">
+  <mat-checkbox (change)="onSwitchTypeChecked($event.checked, 'Red')">Red</mat-checkbox>
+  <mat-checkbox (change)="onSwitchTypeChecked($event.checked, 'Brown')">Brown</mat-checkbox>
+  <mat-checkbox (change)="onSwitchTypeChecked($event.checked, 'Blue')">Blue</mat-checkbox>
+  <mat-checkbox (change)="onSwitchTypeChecked($event.checked, 'Silver')">Silver</mat-checkbox>
+</div>
+
+<h4>Size</h4>
+<div class="size-container">
+  <mat-checkbox (change)="onSizeChecked($event.checked, 'Full')">Full</mat-checkbox>
+  <mat-checkbox (change)="onSizeChecked($event.checked, 'TKL')">TKL</mat-checkbox>
+  <mat-checkbox (change)="onSizeChecked($event.checked, '60%')">60%</mat-checkbox>
+</div>
+
+<h4>Wired/Wireless</h4>
+<div class="wireless-container">
+  <mat-checkbox (change)="onIsWirelessChecked($event.checked, false)">Wired</mat-checkbox>
+  <mat-checkbox (change)="onIsWirelessChecked($event.checked, true)">Wireless</mat-checkbox>
+</div>
+
+<h4>Backlight</h4>
+<div class="backlight-container">
+  <mat-checkbox (change)="onLightChecked($event.checked, 'N/A')">None</mat-checkbox>
+  <mat-checkbox (change)="onLightChecked($event.checked, 'Single')">Single</mat-checkbox>
+  <mat-checkbox (change)="onLightChecked($event.checked, 'RGB')">RGB</mat-checkbox>
+</div>
+<div class="filter-button">
+  <button mat-raised-button color="primary" (click)="onFilterKeyboard()">Filter</button>
+</div>
